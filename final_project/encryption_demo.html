@@ -1,0 +1,51 @@
+<!-- The code demonstrate the encryption types used by Password Managers. 
+MD5 (message digest) and SHA256 ((secure hash algorithm, 256bit) are used as demonstration examples.
+Instructions on Encryption Demo: 
+1. Open developer's tool in a browser, choose "Network"
+2. Type username and password in the form.
+3. Click "Payload" on developer's tool and see the encryption.
+Ex. username "marina" and password "password123" will show the following result:
+username: marina
+passwordMD5: 482c811da5d5b4bc6d497ffa98491e38
+passwordSHA256: ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f -->
+
+<DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Encryption&Hashing</title>
+</head>
+<body>
+	<h1>Password Encryption and Hashing</h1>
+	<pre>Instructions on Encryption Demo: 
+1. Open <b><u>developer's tool</u></b> (Ctrl+Shift+J for chrome) in a browser, choose "Network"
+2. Type username and password in the form, click the submit button.
+3. Click "Payload" on developer's tool, choose encryption_demo.html and see the encryption.
+More detailes are in the code's comments</pre>
+	<form class="form" name="login" method="POST" style="width: 400px;" onsubmit="encryptForm();">
+		<input type="text" name="username" placeholder="username"><br><br><br>
+		<input type="password" name="passwordMD5" placeholder="password"><br><br>
+		<input type="password" name="passwordSHA256" placeholder="confirm password">
+		<button type="submit">Submit</button>
+	</form>
+	<style>
+		body {
+		  align-items: center;
+		  background-color: RGB(177, 232, 242);
+		  display: flex;
+		  height: 100vh;
+		  justify-content: center;
+		}
+		
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/sha1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/sha256.min.js"></script>
+	<script>
+			function encryptForm() {
+			document.login.passwordMD5.value = CryptoJS.MD5(document.login.passwordMD5.value);
+			document.login.passwordSHA256.value = CryptoJS.SHA256(document.login.passwordSHA256.value);
+			}
+	</script>
+</body>
+</html>
