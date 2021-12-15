@@ -1,0 +1,76 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html+css</title>
+</head>
+<style> 
+	body {
+	  align-items: left;
+	  background-color: #c1c0c4;
+	  display: flex;
+	  height: 100vh;
+	  justify-content: center;
+	}
+
+	.element {
+	  align-items: center;
+	  background-color: #c1c0c4;
+	  box-shadow: 
+		12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+		-8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+	  border-radius: 20px;
+	  display: flex;
+	  height: 500px;
+	  justify-content: center;
+	  margin-right: 4rem;
+	  width: 320px;
+	}
+	input[type=text], select {
+	  padding: 12px 20px;
+	  margin: 3px 5px 5px 5px;
+	  display: inline-block;
+	  border: 1px solid #ccc;
+	  border-radius: 10px;
+	  box-sizing: border-box;
+	}
+	label {
+		margin: 0px 0px 0px 10px;
+	}
+	input[type=submit] {
+	  width: 100%;
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 14px 20px;
+	  margin: 8px 0;
+	  border: none;
+	  border-radius: 10px;
+	  cursor: pointer;
+	}
+
+	input[type=submit]:hover {
+		background-color: #15a040;
+	}
+	
+</style>
+<body>
+	<h1>Basic HTML and CSS</h1>
+	<h2>Prototype of Registration Form</h2>
+	<div class="element">
+		<form>
+			<h3>*Fill in the fields:</h3>
+			<label for="first_name">First Name:</label></br>
+			<input type="text" name="first_name" placeholder="First Name"></br></br>
+			<label for="last_name">Last Name:</label></br>
+			<input type="text" name="last_name" placeholder="Last Name"></br></br>
+			<label for="phone">Phone Number:</label></br>
+			<input type="text" name="phone" placeholder="Phone Number"></br></br>
+			<label for="address">Address:</label></br>
+			<input type="text" name="address" placeholder="Address"></br></br>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+	
+</body>
+</html>
+
